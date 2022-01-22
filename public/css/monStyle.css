@@ -51,8 +51,8 @@ section .container .user .imgBx img{
     object-fit: cover;
 }
 
-/* Formulaire de SingIn (connexion) */
 section .container .user .formBx{
+    position: relative;
     width: 50%;
     height: 100%;
     padding: 40px;
@@ -100,8 +100,53 @@ section .container .user .formBx form .register a{
     font-weight: 600;
 }
 
-/* Formulaire de SingUp (Creation de compte) */
-
+/* Intervvertir le formulaire singUP */
+section .container .singupBx  {
+    pointer-events: none;
+}
+section .container.active .singupBx  {
+    pointer-events: inherit;
+}
 section .container .singupBx .formBx {
+    left: 100%;
+}
+section .container .singupBx .imgBx {
+    left: -100%;
+}
+
+section .container.active .singupBx .formBx {
+    left: 0;
+}
+section .container.active .singupBx .imgBx {
+    left: 0;
+}
+
+/* Intervvertir le formulaire singUP */
+section .container .singinBx .formBx {
+    left: 0%;
+}
+section .container .singinBx .imgBx {
+    left: 0%;
+}
+
+section .container.active .singinBx .formBx {
+    left: 100%;
+}
+section .container.active .singinBx .imgBx {
+    left: -100%;
+}
+
+/* Resposivité */
+
+@media screen and (max-width: 991px) {
+    section .container   {
+        max-width: 400px;
+    } 
+    section .container .imgBx  {
+        display: none;
+    }
+    section .container .user .formBx  {
+        width: 100%;
+    }
     
 }

@@ -21,7 +21,9 @@
                         <input type="text" name="" placeholder="Nom d'utilisateur">
                         <input type="password" name="" placeholder="Mot de passe">
                         <input type="submit" name="" value="Se connecter">
-                        <p class="register">Vous n'avez pas encore de compte ? alors <a href="#">Bëssal fii !</a></p>
+                        <p class="register">Vous n'avez pas encore de compte ? alors 
+                            <a href="#" onclick="intervertir();">Bëssal fii !</a>
+                        </p>
                     </form>
                 </div>
             </div>
@@ -36,7 +38,9 @@
                         <input type="password" name="" placeholder="Mot de passe">
                         <input type="password" name="" placeholder="Confirmer votre mot de passe">
                         <input type="submit" name="" value="Se connecter">
-                        <p class="register">Vous avez dèja un compte ? alors <a href="#">Bëssal fii !</a></p>
+                        <p class="register">Vous avez dèja un compte ? alors 
+                            <a href="#" onclick="intervertir();">Bëssal fii !</a>
+                        </p>
                     </form>
                 </div>
                 <div class="imgBx">
@@ -45,5 +49,11 @@
             </div>
         </div>
     </section>
+    <script>
+        function intervertir() {
+            var container = document.querySelector(".container");
+            container.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
