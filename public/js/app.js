@@ -5480,6 +5480,22 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window.Alpine = alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"];
 alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
+var xmlhttp = new XMLHttpRequest();
+
+xmlhttp.onreadystatechange = function () {
+  if (this.readyState == 4) {
+    if (this.status == 200) {
+      var messages = JSON.parse(this.response);
+      console.log(messages);
+    } else {
+      var erreur = JSON.parse(this.response);
+      alert(erreur.message);
+    }
+  }
+};
+
+xmlhttp.open("GET", "ajax/messages?id=1");
+xmlhttp.send();
 
 /***/ }),
 
