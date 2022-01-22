@@ -62,6 +62,10 @@ section .container .user .formBx{
     align-items: center;
     transition: 0.5s;
 }
+section .container .user .formBx h2{
+    color: #725688;
+    font-size: 28px;
+}
 section .container .user .formBx form input{
      position: relative;
      width: 100%;
