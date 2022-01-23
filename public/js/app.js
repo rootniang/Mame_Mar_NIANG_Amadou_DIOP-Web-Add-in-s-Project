@@ -5486,7 +5486,11 @@ xmlhttp.onreadystatechange = function () {
   if (this.readyState == 4) {
     if (this.status == 200) {
       var messages = JSON.parse(this.response);
-      console.log(messages);
+      messages.forEach(function (message) {
+        var html = '<div class="messageConatainer"><div class="heure">' + message.created_at + '</div><div class="message"><div class="userInfo"><div class="photoContainer"><img src="./images/inspirations/user.png" alt=""></div><div class="nomUser"></div></div><div class="textContainer"><p class="textMessage">' + message.contenu + '</p></div></div></div>';
+        var d1 = document.querySelector("#add");
+        d1.insertAdjacentHTML('afterbegin', html);
+      });
     } else {
       var erreur = JSON.parse(this.response);
       alert(erreur.message);

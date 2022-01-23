@@ -11,29 +11,9 @@
                         
                     </div>
                 </div>
-                <div class="mainChatContainer">
-                    <div class="messageConatainer">
-                        <div class="heure">
-                            19h:25
-                        </div>
-                        <div class="message">
-                            <div class="userInfo">
-                                <div class="photoContainer">
-                                    <img src="./images/inspirations/user.png" alt="">
-                                </div>
-                                <div class="nomUser"></div>
-                            </div>
-                            <div class="textContainer">
-                                <p class="textMessage">
-                                    Lorem ipsum dolor sit amet, consectetur 
-                                    adipisicing elit. Nobis esse laboriosam r
-                                    eprehenderit obcaecati repudiandae harum 
-                                    vero nam dolores alias eligendi!
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="messageConatainer">
+                <div class="mainChatContainer "  id="add">
+                    
+                    <div class="messageConatainer sent">
                         <div class="message sent">
                             <div class="userInfo">
                                 <div class="photoContainer">
