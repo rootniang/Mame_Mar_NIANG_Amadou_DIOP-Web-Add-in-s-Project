@@ -1,15 +1,59 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
+    <section>
+        <div class="container d-flex">
+            <div class="sidebar">
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 bg-white border-b border-gray-200">
-                    You're logged in!
+            </div>
+            <div class="chatContainer">
+                <div class="headerChat">
+                    <h1 class="titreWaxtaan">Logo Waxtaan</h1>
+                    <div class="autreInfos">
+                        
+                    </div>
+                </div>
+                <div class="mainChatContainer">
+                    <div class="messageConatainer">
+                        <div class="heure">
+                            19h:25
+                        </div>
+                        <div class="message">
+                            <div class="userInfo">
+                                <div class="photoContainer">
+                                    <img src="./images/inspirations/user.png" alt="">
+                                </div>
+                                <div class="nomUser"></div>
+                            </div>
+                            <div class="textContainer">
+                                <p class="textMessage">
+                                    Lorem ipsum dolor sit amet, consectetur 
+                                    adipisicing elit. Nobis esse laboriosam r
+                                    eprehenderit obcaecati repudiandae harum 
+                                    vero nam dolores alias eligendi!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="messageConatainer">
+                        <div class="message sent">
+                            <div class="userInfo">
+                                <div class="photoContainer">
+                                    <img src="./images/inspirations/user.png" alt="">
+                                </div>
+                                <div class="nomUser"></div>
+                            </div>
+                            <div class="textContainer">
+                                <p class="textMessage">
+                                    Lorem ipsum dolor sit amet, consectetur 
+                                    adipisicing elit. Nobis esse laboriosam r
+                                    eprehenderit obcaecati repudiandae harum 
+                                    vero nam dolores alias eligendi!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="heure sent">
+                            19h:25
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,600;0,900;1,100;1,200&display=swap');
+
+/* Initialisation de font et enlver les margin et padding  par defaut */
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.5s;
+ }
+
+ /*************************************************************** 
+ Cette partie concerne le login et le register de Waxtaan
+ ****************************************************************/
+
+ section{
+     position: relative;
+     min-height: 100vh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background-color: #ffffff;
+     padding: 20px;
+}
+section .container{
+    position: relative;
+    width: 800px;
+    height: 500px;
+    background-color: white;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+}
+section .container .user{
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     display: flex;
+}
+section .container .user .imgBx{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    transition: 0.5s;
+}
+section .container .user .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+section .container .user .formBx{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    padding: 40px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+section .container .user .formBx h2{
+    color: #725688;
+    font-size: 28px;
+}
+section .container .user .formBx form input{
+     position: relative;
+     width: 100%;
+     padding: 10px;
+     background: #f5f5f5;
+     color: #333;
+     border: none;
+     outline: none;
+     margin: 8px 0;
+     font-size: 14px;
+     letter-spacing: 1px;
+}
+section .container .user .formBx form input[type="submit"] {
+    width:100%; 
+    background:#725688; 
+    cursor: pointer;
+    font-size:14px; 
+    font-weight:500; 
+    letter-spacing:1px; 
+    transition: 0.5s;  
+    color: white;
+}
+
+section .container .user .formBx form .register{
+    position: relative; 
+    margin-top:20px; 
+    font-size:12px; 
+    letter-spacing:1px; 
+    color: #555; 
+    text-transform: uppercase; 
+    font-weight:300;
+}
+section .container .user .formBx form .register a{
+    text-decoration: none;
+    color: #725688;
+    font-weight: 600;
+}
+
+/* Intervvertir le formulaire singUP */
+section .container .singupBx  {
+    pointer-events: none;
+}
+section .container.active .singupBx  {
+    pointer-events: inherit;
+}
+section .container .singupBx .formBx {
+    left: 100%;
+}
+section .container .singupBx .imgBx {
+    left: -100%;
+}
+
+section .container.active .singupBx .formBx {
+    left: 0;
+}
+section .container.active .singupBx .imgBx {
+    left: 0;
+}
+
+/* Intervvertir le formulaire singUP */
+section .container .singinBx .formBx {
+    left: 0%;
+}
+section .container .singinBx .imgBx {
+    left: 0%;
+}
+
+section .container.active .singinBx .formBx {
+    left: 100%;
+}
+section .container.active .singinBx .imgBx {
+    left: -100%;
+}
+
+/* Resposivité */
+
+@media screen and (max-width: 991px) {
+    section .container   {
+        max-width: 400px;
+    } 
+    section .container .imgBx  {
+        display: none;
+    }
+    section .container .user .formBx  {
+        width: 100%;
+    }
+    
+}
+
+ /*************************************************************** 
+ Cette partie concerne le salon de chat de Waxtaan
+ ****************************************************************/
+
+.d-flex{
+    display: flex !important;
+}
+
+section .container .sidebar {
+    width: 25%;
+    background: #725688;
+    height: 100%;
+}
+section .container .chatContainer {
+    width: 75%;
+    background: #ffffff;
+    height: 100%;
+}
+section .container .chatContainer .headerChat {
+    padding: 10px;
+    width: 100%;
+    height: 80px;
+    background: white;
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    z-index: 1;
+}
+section .container .chatContainer .mainChatContainer {
+    padding: 20px;
+    width: 100%;
+    overflow: scroll;
+}
+section .container .chatContainer .mainChatContainer .messageConatainer{
+    padding: 20px;
+    width: 100%;
+    min-height: 70px;
+    display: flex;
+    margin: 10px 0;
+}
+
+section .mainChatContainer .messageConatainer .heure{
+    width: 10%;
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+section .mainChatContainer .messageConatainer .heure.sent{
+    margin-left: 15px;
+}
+
+section .mainChatContainer .messageConatainer .message{
+    padding: 20px;
+    width: 100%;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    background-color: #725688;
+    border-radius: 15px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    color: white;
+}
+section .mainChatContainer .messageConatainer .message.sent{
+    background-color: white;
+    color: #725688;
+}
+
+section .mainChatContainer .messageConatainer .message .photoContainer{
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+section .messageConatainer .message .photoContainer img{
+    width: 100%;
+    height: 100%;
+}

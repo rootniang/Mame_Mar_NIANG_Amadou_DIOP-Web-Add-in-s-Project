@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ApiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,4 +22,9 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+Route::get('ajax/messages', [ApiController::class, 'listMessage']);
+Route::post('ajax/send', [ApiController::class, 'sendMessage']);
+
 require __DIR__.'/auth.php';
+
+
