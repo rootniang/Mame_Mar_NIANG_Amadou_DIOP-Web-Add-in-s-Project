@@ -5487,7 +5487,7 @@ xmlhttp.onreadystatechange = function () {
     if (this.status == 200) {
       var messages = JSON.parse(this.response);
       messages.forEach(function (message) {
-        var html = '<div class="messageConatainer"><div class="heure">' + message.created_at + '</div><div class="message"><div class="userInfo"><div class="photoContainer"><img src="./images/inspirations/user.png" alt=""></div><div class="nomUser"></div></div><div class="textContainer"><p class="textMessage">' + message.contenu + '</p></div></div></div>';
+        var html = '<div class="messageConatainer"><div class="heure">' + message.created_at.substr(11, 5) + '</div><div class="message"><div class="userInfo"><div class="photoContainer"><img src="./images/inspirations/user.png" alt=""></div><div class="nomUser"></div></div><div class="textContainer"><p class="textMessage">' + message.contenu + '</p></div></div></div>';
         var d1 = document.querySelector("#add");
         d1.insertAdjacentHTML('afterbegin', html);
       });
