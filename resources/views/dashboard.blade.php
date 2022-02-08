@@ -11,7 +11,7 @@
                         
                     </div>
                 </div>
-                <div class="mainChatContainer "  id="add">
+                <div class="mainChatContainer"  id="add">
                     
                     <div class="messageConatainer sent">
                         <div class="message sent">
