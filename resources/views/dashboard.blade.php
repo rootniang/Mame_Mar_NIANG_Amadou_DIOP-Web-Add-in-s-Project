@@ -12,7 +12,6 @@
                     </div>
                 </div>
                 <div class="mainChatContainer "  id="add">
-                    
                     <div class="messageConatainer sent">
                         <div class="message sent">
                             <div class="userInfo">
@@ -34,6 +33,10 @@
                             19h:25
                         </div>
                     </div>
+                </div>
+                <div class="input_containter w-100">
+                    <textarea wrap="off" class="input_text"></textarea>
+                    <button>Envoyer</button>
                 </div>
             </div>
         </div>
