@@ -15,7 +15,7 @@
 
  section{
      position: relative;
-     min-height: 100vh;
+     min-height:  calc(99vh - 4rem);
      display: flex;
      align-items: center;
      justify-content: center;
@@ -190,6 +190,7 @@ section .container .chatContainer .headerChat {
 section .container .chatContainer .mainChatContainer {
     padding: 20px;
     width: 100%;
+    height: 90%;
     overflow: scroll;
 }
 section .container .chatContainer .mainChatContainer .messageConatainer{

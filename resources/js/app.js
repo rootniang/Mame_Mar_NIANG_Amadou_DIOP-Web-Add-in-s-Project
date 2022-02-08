@@ -17,7 +17,7 @@ let xmlhttp = new XMLHttpRequest() ;
                 
                 let messages = JSON.parse(this.response) ;
                 messages.forEach(message => {
-                    let html = '<div class="messageConatainer"><div class="heure">'+message.created_at+'</div><div class="message"><div class="userInfo"><div class="photoContainer"><img src="./images/inspirations/user.png" alt=""></div><div class="nomUser"></div></div><div class="textContainer"><p class="textMessage">'+message.contenu+'</p></div></div></div>' ;
+                    let html = '<div class="messageConatainer"><div class="heure">'+message.created_at.substr(11, 2)+'</div><div class="message"><div class="userInfo"><div class="photoContainer"><img src="./images/inspirations/user.png" alt=""></div><div class="nomUser"></div></div><div class="textContainer"><p class="textMessage">'+message.contenu+'</p></div></div></div>' ;
                     let d1 = document.querySelector("#add");
                     d1.insertAdjacentHTML('afterbegin', html);
                 });
