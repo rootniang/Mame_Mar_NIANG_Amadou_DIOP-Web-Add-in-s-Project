@@ -30,7 +30,7 @@ class ApiController extends Controller
         if($contenu->message && !empty($contenu->message)){
             $message = new Message() ;
             $message->contenu = $contenu->message ;
-            $message->user_id = 2 ;
+            $message->user_id = Auth::id() ;
             $message->save() ;
             return response('Success', 201) ;
         }
