@@ -8,75 +8,74 @@ window.Alpine = Alpine;
 
 Alpine.start();
 
-let lastId = 1 ;
+// let lastId = 1 ;
 
 
 
-function chargerMessages(){
-    let xmlhttp = new XMLHttpRequest() ;
-    xmlhttp.onreadystatechange = function () {
-        if (this.readyState == 4) {
-            if (this.status == 200) {
+// function chargerMessages(){
+//     let xmlhttp = new XMLHttpRequest() ;
+//     xmlhttp.onreadystatechange = function () {
+//         if (this.readyState == 4) {
+//             if (this.status == 200) {
                 
-                let messages = JSON.parse(this.response) ;
-                messages.forEach(message => {
-                    let html = '<div class="messageConatainer"><div class="heure">'+message.created_at.substr(11, 5)+'</div><div class="message"><div class="userInfo"><div class="photoContainer"><img src="./images/inspirations/user.png" alt=""></div><div class="nomUser"></div></div><div class="textContainer"><p class="textMessage">'+message.contenu+'</p></div></div></div>' ;
-                    let d1 = document.querySelector("#add");
-                    d1.insertAdjacentHTML('afterbegin', html);
-                    lastId = message.id ;
-                });
-            }else{
-                let erreur = JSON.parse(this.response);
-                alert(erreur.message);
-            }
-        }
-    } ;
+//                 let messages = JSON.parse(this.response) ;
+//                 messages.forEach(message => {
+//                     let html = '<div class="messageConatainer"><div class="heure">'+message.created_at.substr(11, 5)+'</div><div class="message"><div class="userInfo"><div class="photoContainer"><img src="./images/inspirations/user.png" alt=""></div><div class="nomUser"></div></div><div class="textContainer"><p class="textMessage">'+message.contenu+'</p></div></div></div>' ;
+//                     let d1 = document.querySelector("#add");
+//                     d1.insertAdjacentHTML('afterbegin', html);
+//                     console.log(lastId);
+//                     lastId = message.id ;
+//                 });
+//             }else{
+//                 let erreur = JSON.parse(this.response);
+//                 alert(erreur.message);
+//             }
+//         }
+//     } ;
 
-    xmlhttp.open("GET", 'ajax/messages?id='+lastId) ;
-
-
-    xmlhttp.send() ;
-} 
+//     xmlhttp.open("GET", 'ajax/messages?id='+lastId) ;
 
 
-setInterval(chargerMessages, 1000) ;
+//     xmlhttp.send() ;
+// } 
 
-function ajouterMessage() {
-    let message = document.querySelector("#message").value ;
 
-    if(message != ""){
-        let data = {} ;
-        data["message"] = message ;
-        dataJSON = JSON.stringify(data) ;
+// setInterval(chargerMessages, 1000) ;
 
-        let xmlhttp = new XMLHttpRequest() ;
-        xmlhttp.onreadystatechange = function () {
-            if (this.readyState == 4) {
-                if (this.status == 201) {
-                    
-                    document.querySelector("#message").value = "" ;
-                    }
-                }else{
-                    let erreur = JSON.parse(this.response);
-                    alert(erreur.message);
-                }
-            } ;
-        } 
+// function ajouterMessage() {
+//     let message = document.querySelector("#message").value ;
 
-    xmlhttp.open("POST", "ajax/send");
+    
+//     if(message != ""){
+//         let data = {} ;
+//         data["message"] = message ;
+//         let xmlhttp = new XMLHttpRequest() ;
+//         let dataJSON = JSON.stringify(data) ;
+//         xmlhttp.onreadystatechange = function () {
+//             if (this.readyState == 4) {
+//                 if (this.status == 201) {
+//                     document.querySelector("#message").value = "" ;
+//                     }
+//                 }else{
+//                     let erreur = this.response;
+//                     console.log(erreur) ;
+//                 }
+//             } ;
+//         xmlhttp.open("POST", "ajax/send");
 
-    xmlhttp.send(dataJSON);    
+//         xmlhttp.send(dataJSON); 
+//     }    
 
-}
+// }
 
-function listenTextArea(entre){
-    if(entre.key == "Enter"){
-        ajoutMessage() ;
-    }
-}
+// function listenTextArea(entre){
+//     if(entre.key == "Enter"){
+//         ajouterMessage() ;
+//     }
+// }
 
-let message = document.querySelector("#message");
-message.addEventListener("keyup", listenTextArea);
+// let message = document.querySelector("#message");
+// message.addEventListener("keyup", listenTextArea);
 
-let sender = document.querySelector("#sender");
-sender.addEventListener("click", ajouterMessage);
+// let sender = document.querySelector("#sender");
+// sender.addEventListener("click", ajouterMessage);

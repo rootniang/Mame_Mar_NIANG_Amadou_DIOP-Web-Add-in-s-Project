@@ -10,13 +10,13 @@ class ApiController extends Controller
 {
     public function listMessage(Request $request) {
         
-        $id = $request->input('id') ;
+        $id = (int)strip_tags($request->query('id')) ;
         if($id){
             if($id > 1 ){
-                return response()->json(Message::with('user')->where('id', '>', $id)->get());
+                return response()->json(Message::with('user')->where('id', '>', $id)->orderBy('id', 'asc')->get());
             }
             else{
-                return response()->json(Message::with('user')->latest()->take(10)->get());
+                return response()->json(Message::with('user')->orderBy('id', 'asc')->get());
             }
         }
         else{
@@ -25,13 +25,14 @@ class ApiController extends Controller
     }
 
     public function sendMessage(Request $request) {
-        $contenu = $request->input('message') ;
-        if($contenu){
+        $contenuJSON = $request->getContent() ;
+        $contenu = json_decode($contenuJSON) ;
+        if($contenu->message && !empty($contenu->message)){
             $message = new Message() ;
-            $message->contenu = $contenu ;
-            $message->user_id = Auth::id() ;
+            $message->contenu = $contenu->message ;
+            $message->user_id = 2 ;
             $message->save() ;
-            return response()->json(["status" => "success"]);
+            return response('Success', 201) ;
         }
         else{
             return response()->json(["status" => "error"]);
