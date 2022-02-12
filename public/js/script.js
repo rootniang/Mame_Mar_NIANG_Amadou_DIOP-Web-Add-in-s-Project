@@ -6,6 +6,7 @@ function scrollDown() {
 }
 
 function chargerMessages(){
+    let userid = document.querySelector("#userid").value;
     let xmlhttp = new XMLHttpRequest() ;
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4) {
@@ -16,7 +17,7 @@ function chargerMessages(){
                     let html = '<div class="messageConatainer"><div class="heure">'+message.created_at.substr(11, 5)+'</div><div class="message"><div class="userInfo"></div><div class="textContainer"><p class="textMessage"><span class="nomUser">'+message.user.name+'</span><br>'+message.contenu+'</p></div></div></div>' ;
                     let html2 = '<div class="messageConatainer sent"><div class="message sent"><div class="userInfo"><div class="nomUser"</div></div></div><div class="textContainer"><p class="textMessage"><span class="nomUser">'+message.user.name+'</span><br>'+message.contenu+'</p></div></div><div class="heure sent">'+message.created_at.substr(11, 5)+'</div></div>';
                     let d1 = document.querySelector("#add");
-                    if (message.user_id == 14) 
+                    if (message.user_id == userid) 
                         d1.insertAdjacentHTML('beforeend', html);
                     else
                         d1.insertAdjacentHTML('beforeend', html2);
