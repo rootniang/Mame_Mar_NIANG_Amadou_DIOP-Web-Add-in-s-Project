@@ -80,6 +80,7 @@ section .container .user .formBx form input {
     outline: none;
     margin: 8px 0;
     font-size: 14px;
+    font-weight: 400;
     letter-spacing: 1px;
 }
 section .container .user .formBx form input[type="submit"] {
@@ -274,4 +275,29 @@ section .messageConatainer .message .photoContainer img {
     color: white;
     padding: 12px 20px;
     border-radius: 20px;
+}
+
+#submit_login:disabled{
+    background: rgb(156, 156, 156);
+    cursor: not-allowed;
+}
+
+#submit_register:disabled{
+    background: rgb(156, 156, 156);
+    cursor: not-allowed;
+}
+
+#name_complet{
+    background-color: rgb(255, 255, 255) !important;
+    border: 1px solid rgb(240, 238, 238);
+    cursor: no-drop;
+}
+
+.error_message{
+    color: red;
+    font-size: 13px;
+}
+
+.red-border{
+    border: 1px red solid;
 }

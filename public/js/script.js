@@ -28,16 +28,12 @@ function chargerMessages(){
     } ;
 
     xmlhttp.open("GET", 'ajax/messages?id='+lastId) ;
-
-
     xmlhttp.send() ;
 } 
 
 
 function ajouterMessage() {
     let message = document.querySelector("#message").value ;
-
-    
     if(message != ""){
         let data = {} ;
         data["message"] = message ;
@@ -54,7 +50,6 @@ function ajouterMessage() {
                 }
             } ;
         xmlhttp.open("POST", "ajax/send");
-
         xmlhttp.send(dataJSON); 
     }    
 

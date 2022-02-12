@@ -17,6 +17,9 @@
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
+        <script src="{{ asset('js/jquery.js') }}" defer></script>
+        <script src="{{ asset('js/script_login.js') }}" defer></script>
+
     </head>
     <body>
         <div class="font-sans text-gray-900 antialiased">

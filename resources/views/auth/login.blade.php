@@ -13,18 +13,17 @@
                         <x-auth-session-status class="mb-4" :status="session('status')" />
                         <!-- Validation Errors -->
                         <x-auth-validation-errors class="mb-4" :errors="$errors" />
-                        <x-input id="email" 
+                        <x-input id="email" class="not_empty"
                             type="email" name="email" 
-                            placeholder="Ex : amadou@diop.gdil" 
-                            :value="old('email')" required  />
-                        
-                            <x-input id="password"
-                                    type="password"
-                                    name="password"
-                                    placeholder="Mot de passe"
-                                    required autocomplete="current-password" />
-                        
-                        <input type="submit" name="" value="Se connecter">
+                            placeholder="Ex : amadou@diop.gdil" required  />
+                        <p id="error_msg_login" class="error_message">Format du mail non valide</p>
+                        <x-input id="password" class="not_empty"
+                        type="password"
+                        name="password"
+                                placeholder="Mot de passe"
+                                required autocomplete="current-password" />
+                                
+                        <input type="submit" name="submit" id="submit_login" value="Se connecter">
                         <p class="register">Vous n'avez pas encore de compte ? alors 
                             <a href="#" onclick="intervertir();">Bëssal fii !</a>
                         </p>
@@ -38,14 +37,18 @@
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
                         <h2>Bindu ci waxtaan wi</h2>
-                        <x-input id="name" type="text" name="name" :value="old('name')" required  placeholder="Nom complet"/>
-                        <x-input id="email" type="email" name="email" 
-                            :value="old('email')" required placeholder="Votre adresse mail"/>
-                        <x-input id="password" type="password" name="password"
-                            required autocomplete="new-password" placeholder="Mot de passe" />
-                            <x-input id="password_confirmation" type="password"
-                            name="password_confirmation" required placeholder="Confirmer le mot de passe"/>
-                        <input type="submit" name="" value="Enregistrer">
+                        <x-input class="notEmpty" id="name" type="text" name="name" :value="old('name')" required  placeholder="Nom "/>
+                        <x-input class="notEmpty" id="lastname" type="text" name="lastname" :value="old('lastname')" required  placeholder="Prenom"/>
+                        <x-input  id="name_complet" type="text" name="name" placeholder="Nom complet" disabled/>
+                        <x-input class="notEmpty" id="email_2" type="email" name="email" 
+                        :value="old('email')" required placeholder="Votre adresse mail"/>
+                        <p id="error_msg" class="error_message">Format du mail non valide</p>
+                        <x-input class="notEmpty" id="password2" type="password" name="password"
+                        required autocomplete="new-password" placeholder="Mot de passe" />
+                        <x-input class="notEmpty" id="password_confirmation" type="password"
+                        name="password_confirmation" required placeholder="Confirmer le mot de passe"/>
+                        <p id="error_conf_password" class="error_message">Mots de passe non conforme</p>
+                        <input type="submit" name="" id="submit_register" value="Enregistrer">
                         <p class="register">Vous avez dèja un compte ?  
                             <a href="#" onclick="intervertir();">Bëssal fii !</a>
                         </p>
@@ -58,10 +61,9 @@
         </div>
     </section>
     <script>
-        function intervertir() {
-            var container = document.querySelector(".container");
-            container.classList.toggle('active');
-        }
+
+
+
     </script>
 </x-guest-layout>
 
