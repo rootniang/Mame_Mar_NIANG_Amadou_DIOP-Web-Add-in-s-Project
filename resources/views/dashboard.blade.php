@@ -12,7 +12,7 @@
                     </div>
                 </div>
                 <div class="mainChatContainer"  id="add">
-                   
+                    
                 </div>
                 <div class="input_containter w-100">
                     <textarea id="message" wrap="off" class="input_text"></textarea>

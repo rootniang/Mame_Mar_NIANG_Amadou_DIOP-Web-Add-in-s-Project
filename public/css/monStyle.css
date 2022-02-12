@@ -217,7 +217,7 @@ section .mainChatContainer .messageConatainer .message {
     width: 100%;
     min-height: 70px;
     display: flex;
-    align-items: center;
+    align-items: start;
     background-color: #725688;
     border-radius: 15px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -300,4 +300,8 @@ section .messageConatainer .message .photoContainer img {
 
 .red-border{
     border: 1px red solid;
+}
+
+.nomUser {
+    font-weight: 600;
 }
