@@ -9,6 +9,18 @@
     transition: 0.5s;
 }
 
+#add::-webkit-scrollbar {
+    width: 10px;
+    background: #72568838;
+}
+#add::-webkit-scrollbar-thumb {
+    background: #725688;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+
+
 /*************************************************************** 
  Cette partie concerne le login et le register de Waxtaan
  ****************************************************************/
@@ -192,7 +204,8 @@ section .container .chatContainer .mainChatContainer {
     padding: 20px;
     width: 100%;
     height: calc(90% - 80px);
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 section .container .chatContainer .mainChatContainer .messageConatainer {
     padding: 20px;
@@ -257,12 +270,16 @@ section .messageConatainer .message .photoContainer img {
 .input_text {
     width: 85%;
     height: 50px;
+    padding: 10px 20px;
     background: rgb(228, 228, 228);
     border: none;
     border-radius: 20px;
     outline: none;
     resize: none;
     overflow: hidden !important;
+    font-size: 14px;
+    font-weight: 600;
+    color: #725688;
 }
 
 .input_text:focus-within {
