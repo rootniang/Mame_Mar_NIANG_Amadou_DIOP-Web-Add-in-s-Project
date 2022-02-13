@@ -8,6 +8,7 @@
                 <div class="formBx">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
+                        <img src="./images/inspirations/logo3.png" alt=""><br>
                         <h2>Tabbi ci waxtaan wi</h2>
                         <!-- Session Status -->
                         <x-auth-session-status class="mb-4" :status="session('status')" />
@@ -15,6 +16,7 @@
                         <x-auth-validation-errors class="mb-4" :errors="$errors" />
                         <x-input id="email" class="not_empty"
                             type="email" name="email" 
+                            :value="old('email')"
                             placeholder="Ex : amadou@diop.gdil" required  />
                         <p id="error_msg_login" class="error_message">Format du mail non valide</p>
                         <x-input id="password" class="not_empty"

@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: 0.5s;
+    transition: 0.2s;
 }
 
 #add::-webkit-scrollbar {
@@ -113,12 +113,23 @@ section .container .user .formBx form .register {
     letter-spacing: 1px;
     color: #555;
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: 600;
 }
 section .container .user .formBx form .register a {
     text-decoration: none;
-    color: #725688;
+    background: #705188;
+    color: #fff;
     font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+section .container .user .formBx form .register a:hover {
+    background: #fff;
+    color: #705188;
+    border: 1px solid #705188;
+    transform: scale(1.04);
 }
 
 /* Intervvertir le formulaire singUP */
@@ -354,7 +365,15 @@ section .messageConatainer .message .photoContainer img {
     background-color: #725688;
     color: white;
     padding: 12px 20px;
-    border-radius: 20px;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.input_containter button:hover {
+    background-color: #fff;
+    color: #725688;
+    border: 1px solid #725688;
+    transform: scale(1.06);
 }
 
 #submit_login:disabled{
