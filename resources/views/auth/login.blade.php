@@ -37,9 +37,9 @@
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
                         <h2>Bindu ci waxtaan wi</h2>
-                        <x-input class="notEmpty" id="name" type="text" name="name" :value="old('name')" required  placeholder="Nom "/>
-                        <x-input class="notEmpty" id="lastname" type="text" name="lastname" :value="old('lastname')" required  placeholder="Prenom"/>
-                        <x-input  id="name_complet" type="text" name="name" placeholder="Nom complet" disabled/>
+                        <x-input class="notEmpty" id="firstname" type="text" name="firstname" required  placeholder="Prenom : Amadou"/>
+                        <x-input class="notEmpty" id="lastname" type="text" name="lastname" :value="old('lastname')" required  placeholder="Nom ( Ex: DIOP)"/>
+                        <x-input  id="fullname" type="text" name="fullname" placeholder="Nom complet" required/>
                         <x-input class="notEmpty" id="email_2" type="email" name="email" 
                         :value="old('email')" required placeholder="Votre adresse mail"/>
                         <p id="error_msg" class="error_message">Format du mail non valide</p>

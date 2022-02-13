@@ -67,7 +67,7 @@ $(function () {
         let pswdOK = 0;
         let emailOK = 0;
         let input_vide2 = 1;
-        $("#name_complet").val($("#name").val()+ " " + $("#lastname").val())  ;
+        $("#fullname").val($("#firstname").val()+ " " + $("#lastname").val())  ;
 
         $('.notEmpty').each(function() {
             //alert($(this).attr('name'));

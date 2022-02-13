@@ -14,7 +14,7 @@
     background: #72568838;
 }
 #add::-webkit-scrollbar-thumb {
-    background: #725688;
+    background: #543969;
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     border-radius: 5px;
 }
@@ -27,7 +27,7 @@
 
 section {
     position: relative;
-    min-height: calc(99vh - 4rem);
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -183,7 +183,46 @@ section .container .sidebar {
     width: 25%;
     background: #725688;
     height: 100%;
+    padding: 20px;
 }
+
+section .container .sidebar .logoContainer{
+    height: 70px;
+}   
+
+
+section .container .sidebar .otherUsersContainer{
+    margin-top: 30px;
+}   
+
+section .container .sidebar .otherUsersContainer .listUsers{
+    font-size: 19px;
+    font-weight: 800;
+    font-style: italic;
+    color: white;
+    margin-bottom: 15px;
+}   
+
+section .container .sidebar .otherUsersContainer .anUser{
+    padding: 10px;
+    min-height: 40px;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    color: white;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+section .container .sidebar .otherUsersContainer .anUser .iconUser{
+    padding: 5px;
+    width: 35px;
+}
+
+section .container .sidebar .otherUsersContainer .otherUserName{
+    font-weight: 400;
+}
+
 section .container .chatContainer {
     position: relative;
     width: 75%;
@@ -191,21 +230,45 @@ section .container .chatContainer {
     height: 100%;
 }
 section .container .chatContainer .headerChat {
-    padding: 10px;
+    position: inherit;
+    padding: 10px 30px;
     width: 100%;
     height: 80px;
-    background: white;
+    background: rgba(255, 255, 255, 0.70);
+    backdrop-filter: blur(5.3px);
+    -webkit-backdrop-filter: blur(5.3px);
     display: flex;
     align-items: center;
+    justify-content: space-between;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     z-index: 1;
 }
+
+section .container .chatContainer .headerChat button{
+    padding: 10px 20px;
+    background: #725688;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    transition: 0.2s;
+}
+
+section .container .chatContainer .headerChat button:hover{
+    background: white;
+    color: #725688;
+    border: 0.5px solid #725688;
+    transform: scale(1.1);
+}
+
 section .container .chatContainer .mainChatContainer {
     padding: 20px;
     width: 100%;
-    height: calc(90% - 80px);
+    height: calc(95%);
     overflow-y: scroll;
     overflow-x: hidden;
+    transform: translateY(-80px);
 }
 section .container .chatContainer .mainChatContainer .messageConatainer {
     padding: 20px;
@@ -321,4 +384,27 @@ section .messageConatainer .message .photoContainer img {
 
 .nomUser {
     font-weight: 600;
+}
+
+.userNameHeader{
+    font-weight: 800;
+    font-size: 16px;
+    color: #543969;
+}
+
+.userIconImg{
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+}
+
+.userNameHeader .enLign{
+    font-weight: 200;
+    font-size: 12px;
+    color: #543969;
+}
+
+.userInfoContainer{
+    display: flex;
+    height: 100%;
 }
