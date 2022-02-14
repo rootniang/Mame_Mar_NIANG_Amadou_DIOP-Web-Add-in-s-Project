@@ -1,10 +1,14 @@
 let lastId = 1 ;
 
+
+/* Permet de scroller vers le bas afin de voir les messages dernierement envoye */
 function scrollDown() {
     let elem = document.getElementById('add');
     elem.scrollTop = elem.scrollHeight;
 }
 
+
+/* Chargement des messages  */
 function chargerMessages(){
     let userid = document.querySelector("#userid").value;
     let xmlhttp = new XMLHttpRequest() ;
@@ -17,9 +21,9 @@ function chargerMessages(){
                     let html = '<div class="messageConatainer"><div class="heure">'+message.created_at.substr(11, 5)+'</div><div class="message"><div class="userInfo"></div><div class="textContainer"><p class="textMessage"><span class="nomUser">'+message.user.name+'</span><br>'+message.contenu+'</p></div></div></div>' ;
                     let html2 = '<div class="messageConatainer sent"><div class="message sent"><div class="userInfo"><div class="nomUser"</div></div></div><div class="textContainer"><p class="textMessage"><span class="nomUser">'+message.user.name+'</span><br>'+message.contenu+'</p></div></div><div class="heure sent">'+message.created_at.substr(11, 5)+'</div></div>';
                     let d1 = document.querySelector("#add");
-                    if (message.user_id == userid) 
+                    if (message.user_id == userid) // Message envoyé
                         d1.insertAdjacentHTML('beforeend', html);
-                    else
+                    else //Message reçu
                         d1.insertAdjacentHTML('beforeend', html2);
 
                     scrollDown();
@@ -38,6 +42,7 @@ function chargerMessages(){
 } 
 
 
+/* Enregistrement du message dans la base de donnee */
 function ajouterMessage() {
     let message = document.querySelector("#message").value ;
     if(message != ""){
@@ -61,6 +66,7 @@ function ajouterMessage() {
 
 }
 
+/* Gestion d'evenement sur la bare d'ecriture des message... Taper sur enregistrer pour envoyer */
 function listenTextArea(entre){
     if(entre.key == "Enter"){
         ajouterMessage() ;
