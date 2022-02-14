@@ -57,13 +57,13 @@ section .container .user .imgBx {
     height: 100%;
     background-color: white;
     transition: 0.5s;
-}
+    margin: auto 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 section .container .user .imgBx img {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
     object-fit: cover;
 }
 
@@ -426,4 +426,63 @@ section .messageConatainer .message .photoContainer img {
 .userInfoContainer{
     display: flex;
     height: 100%;
+}
+
+
+/* ********** Page Merciii */
+
+.merci_container{
+    width: 50%;
+    height: 100%;
+    padding: 10px 6%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.merci_body{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/inspirations/bg_merci.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.merci_body h1{
+    font-size: 80px;
+    font-family: 'Courgette', cursive;
+    color: #8bcd21;
+}
+
+.merci_body span{
+    font-size: 50px;
+    font-family: 'Sacramento', cursive;
+    color: #725688;
+}
+
+.merci_body button{
+    padding: 10px 30px;
+    background-color: #725688;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.merci_body button:hover{
+    background-color: white;
+    color: #725688;
+    transform: scale(1.05);
+    border: 1px solid #725688;
+}
+
+.logo_container_merci{
+    width: 300px;
+}
+
+.logo_container_merci img{
+    width: 100%;
 }

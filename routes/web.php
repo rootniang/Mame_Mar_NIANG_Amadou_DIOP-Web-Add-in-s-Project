@@ -16,7 +16,7 @@ use App\Http\Controllers\ApiController;
 
 Route::get('/', function () {
     return view('auth.login');
-});
+})->name('home');;
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -25,6 +25,11 @@ Route::get('/dashboard', function () {
 Route::get('ajax/messages', [ApiController::class, 'listMessage']);
 Route::post('ajax/send', [ApiController::class, 'sendMessage']);
 Route::get('ajax/user', [ApiController::class, 'UtilisateurEnLigne']);
+
+
+Route::get('/merci', function () {
+    return view('merci');
+});
 
 require __DIR__.'/auth.php';
 
