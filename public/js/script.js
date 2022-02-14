@@ -66,8 +66,37 @@ function ajouterMessage() {
 
 }
 
-/* Gestion d'evenement sur la bare d'ecriture des message... Taper sur enregistrer pour envoyer */
-function listenTextArea(entre){
+function userConnected() {
+    let userid = document.querySelector("#userid").value;
+    let xmlhttp = new XMLHttpRequest() ;
+    let elements = document.querySelectorAll(".anUser");
+    if(elements){
+        Array.prototype.forEach.call(elements, (node) =>{
+            node.parentNode.removeChild(node) ;
+        });
+    }  
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4) {
+            if (this.status == 200) {
+                
+                let users = JSON.parse(this.response) ;
+                users.forEach(user => {
+                    let html = '<div class="anUser"><img src="images/inspirations/iconUser.png" alt="" class="iconUser"><p class="otherUserName">'+user.user.name+'</p></div>'
+                    let d1 = document.querySelector(".otherUsersContainer");
+                    d1.insertAdjacentHTML('beforeend', html);
+                });
+            }else{
+                let erreur = JSON.parse(this.response);
+                alert(erreur.message);
+            }
+        }
+    } ;
+
+    xmlhttp.open("GET", 'ajax/user') ;
+    xmlhttp.send() ;
+}
+
+function listenTextArea(entre) {
     if(entre.key == "Enter"){
         ajouterMessage() ;
     }
@@ -82,5 +111,8 @@ window.onload = () => {
 
     chargerMessages();
     setInterval(chargerMessages, 1000);
+
+    userConnected();
+    setInterval(userConnected, 10000);
 }
 

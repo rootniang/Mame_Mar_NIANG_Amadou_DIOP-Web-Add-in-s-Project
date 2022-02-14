@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Message;
+use App\Models\Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -38,5 +39,10 @@ class ApiController extends Controller
             return response()->json(["status" => "error"]);
         }
         
+    }
+
+    public function UtilisateurEnLigne(Request $request) {
+        
+        return response()->json(Session::with('user')->where('user_id', '!=', NULL)->get());
     }
 }

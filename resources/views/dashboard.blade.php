@@ -7,37 +7,8 @@
                     <img src="images/inspirations/logo1.png" alt="">
                 </div>
                 <div class="otherUsersContainer">
-                    <p class="listUsers">Liste des utilisateurs</p>
-                    <div class="anUser">
-                        <img src="images/inspirations/iconUser.png" alt="" class="iconUser">
-                        <p class="otherUserName">
-                            This is an user name
-                        </p>
-                    </div>
-                    <div class="anUser">
-                        <img src="images/inspirations/iconUser.png" alt="" class="iconUser">
-                        <p class="otherUserName">
-                            This is an user name
-                        </p>
-                    </div>
-                    <div class="anUser">
-                        <img src="images/inspirations/iconUser.png" alt="" class="iconUser">
-                        <p class="otherUserName">
-                            This is an user name
-                        </p>
-                    </div>
-                    <div class="anUser">
-                        <img src="images/inspirations/iconUser.png" alt="" class="iconUser">
-                        <p class="otherUserName">
-                            This is an user name
-                        </p>
-                    </div>
-                    <div class="anUser">
-                        <img src="images/inspirations/iconUser.png" alt="" class="iconUser">
-                        <p class="otherUserName">
-                            This is an user name
-                        </p>
-                    </div>
+                    <p class="listUsers">Utilisateurs en Ligne</p>
+                    
                 </div>
             </div>
             <div class="chatContainer">
