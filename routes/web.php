@@ -24,6 +24,7 @@ Route::get('/dashboard', function () {
 
 Route::get('ajax/messages', [ApiController::class, 'listMessage']);
 Route::post('ajax/send', [ApiController::class, 'sendMessage']);
+Route::get('ajax/user', [ApiController::class, 'UtilisateurEnLigne']);
 
 require __DIR__.'/auth.php';
 
