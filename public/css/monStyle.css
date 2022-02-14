@@ -434,7 +434,7 @@ section .messageConatainer .message .photoContainer img {
 .merci_container{
     width: 50%;
     height: 100%;
-    padding: 10px 6%;
+    padding: 10px 10%;
     display: flex;
     flex-direction: column;
     justify-content: center;
