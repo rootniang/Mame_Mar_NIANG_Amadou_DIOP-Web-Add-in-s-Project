@@ -49,7 +49,7 @@
                         required autocomplete="new-password" placeholder="Mot de passe" />
                         <x-input class="notEmpty" id="password_confirmation" type="password"
                         name="password_confirmation" required placeholder="Confirmer le mot de passe"/>
-                        <p id="error_conf_password" class="error_message">Mots de passe non conforme</p>
+                        <p id="error_conf_password" class="error_message">Mots de passe non conformes</p>
                         <input type="submit" name="" id="submit_register" value="Enregistrer">
                         <p class="register">Vous avez dèja un compte ?  
                             <a href="#" onclick="intervertir();">Bëssal fii !</a>
