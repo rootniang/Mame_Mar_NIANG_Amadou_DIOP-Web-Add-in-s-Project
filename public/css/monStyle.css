@@ -168,19 +168,7 @@ section .container.active .singinBx .imgBx {
     left: -100%;
 }
 
-/* Resposivité */
 
-@media screen and (max-width: 991px) {
-    section .container {
-        max-width: 400px;
-    }
-    section .container .imgBx {
-        display: none;
-    }
-    section .container .user .formBx {
-        width: 100%;
-    }
-}
 
 /*************************************************************** 
  Cette partie concerne le salon de chat de Waxtaan
@@ -484,4 +472,79 @@ section .messageConatainer .message .photoContainer img {
 
 .logo_container_merci img{
     width: 100%;
+}
+
+
+/******************************* Resposivité *************************************/
+
+@media screen and (max-width: 991px) {
+    section{
+        padding: 0;
+        width: 100%;
+    }
+
+    .container{
+        width: 100%;
+        padding: 0px;
+        height: 99vh;
+    }
+    
+    section .container {
+        max-width: 400px;
+        width: 100%;
+        height: 100vh;
+    }
+    section .container .imgBx {
+        display: none;
+    }
+    section .container .user .formBx {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .sidebar{
+        display: none;
+    }
+
+    section .container .chatContainer {
+        position: relative;
+        width: 100%;
+        background: #ffffff;
+        height: 100%;
+    }
+    section .container .chatContainer .mainChatContainer {
+        padding: 0px;
+        padding-bottom: 30px;
+    }
+
+    .merci_container{
+        width: 100%;
+        padding: 30px;
+    }
+
+    .merci_body h1 {
+        font-size: 60px;
+        font-family: 'Courgette', cursive;
+        color: #8bcd21;
+    }
+
+    .merci_body span {
+        font-size: 28px;
+        font-family: 'Sacramento', cursive;
+        color: #725688;
+        margin-bottom: 30px;
+    }
+
+    .merci_body{
+        background-image: none;
+    }
+    
+    .imgBx{
+        display: none !important;
+    }
+
+    form .register{
+        line-height: 3;
+    }
+
 }
